@@ -1,0 +1,70 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Altimeter.Support"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True" 
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" xmlns:my1="clr-namespace:AdDuplex;assembly=AdDuplex.AdControl.Silverlight" xmlns:my="clr-namespace:Google.AdMob.Ads.WindowsPhone7.WPF;assembly=Google.AdMob.Ads.WindowsPhone7">
+    
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="PageTitle" Text="About/Setting" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Foreground="Silver"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1">
+            
+            <TextBlock FontWeight="Bold" Height="35" HorizontalAlignment="Left" Margin="21,112,0,0" Name="textBlock7" Text="Privacy policy" VerticalAlignment="Top" Width="428" TextAlignment="Left" Foreground="Silver" />
+            <TextBlock FontWeight="Normal" Height="35" HorizontalAlignment="Left" Margin="262,599,0,0" Name="textBlock2" Text="Tanawat Pitchayapryt" TextAlignment="Right" VerticalAlignment="Top" Width="212" Foreground="Silver" FontStyle="Italic" />
+            
+            <HyperlinkButton Content="About me" FontSize="20" Foreground="#FF00B4FF" Height="30" Margin="0,562,234,0" Name="hyperlinkButton2" VerticalAlignment="Top" NavigateUri="http://th.linkedin.com/in/pwattjaidee" TargetName="_blank" HorizontalAlignment="Right" Width="128" />
+            <HyperlinkButton Content="Follow me" FontSize="20" Foreground="#FF00B4FF" Height="30" Margin="245,562,105,0" Name="hyperlinkButton3" VerticalAlignment="Top" NavigateUri="http://twitter.com/pwattjaidee" TargetName="_blank" />
+            <HyperlinkButton Content="Feature Request / Bug Report / Donate" FontSize="20" Foreground="#FF00B4FF" Height="30" HorizontalAlignment="Left" Margin="59,275,0,0" Name="hyperlinkButton1" VerticalAlignment="Top" Width="372" NavigateUri="http://wp.me/p1idgQ-2X" TargetName="_blank" />
+            
+            <TextBlock FontWeight="Normal" Foreground="Silver" Height="35" HorizontalAlignment="Left" Margin="381,562,0,0" Name="textBlock3" Text="(v 1.3)" TextAlignment="Right" VerticalAlignment="Top" Width="78" />
+            
+            <HyperlinkButton Height="70.5" Width="160.5" NavigateUri="https://www.paypal.com/th/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=QRMWLPVGWRTPQ" TargetName="_blank" Margin="160,373,159,190">
+                <HyperlinkButton.Background>
+                    <ImageBrush ImageSource="/Altimeter;component/btn_paynowCC_LG.png" />
+                </HyperlinkButton.Background>
+            </HyperlinkButton>
+            
+
+            <TextBlock FontWeight="Normal" Foreground="Silver" Height="35" HorizontalAlignment="Left" Margin="6,330,0,0" Name="textBlock4" Text="&quot;Like my app? Buy me a Green Tea!&quot;" TextAlignment="Center" VerticalAlignment="Top" Width="474" />
+            <!--<my:BannerAd HorizontalAlignment="Left" 
+                         Margin="0,469,0,0" 
+                         Name="bannerAd1" 
+                         AdUnitID="a14ea2d9ef09d0d"
+                         VerticalAlignment="Top" />-->
+            <toolkit:ToggleSwitch Header="Location Data (GPS)" Height="111" HorizontalAlignment="Left" Margin="24,18,0,0" Name="toggleSwitch1" VerticalAlignment="Top" Width="456" Checked="toggleSwitch1_Checked" Unchecked="toggleSwitch1_Unchecked" Loaded="toggleSwitch1_Loaded"  />
+            <TextBlock FontWeight="Normal" Foreground="Silver" Height="60" HorizontalAlignment="Left" Margin="21,135,0,0" Name="textBlock1" Text="- We need your location data in order to calculate your current altitude." TextAlignment="Left" VerticalAlignment="Top" Width="453" TextWrapping="Wrap" FontStyle="Italic" />
+            <TextBlock FontWeight="Normal" Foreground="Silver" Height="60" HorizontalAlignment="Left" Margin="21,191,0,0" Name="textBlock5" Text="- We won't share your location data to anyone. Your data subject to be used only in this app." TextAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="453" FontStyle="Italic" />
+            <my:BannerAd 
+                xmlns:google="clr-namespace:Google.AdMob.Ads.WindowsPhone7.WPF;assembly=Google.AdMob.Ads.WindowsPhone7"
+                HorizontalAlignment="Left" 
+                Margin="0,475,0,0" 
+                Name="bannerAd1" 
+                VerticalAlignment="Top" 
+                AdUnitID="a14ea2d9ef09d0d" />
+        </Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Thaibird;component/bg.png" />
+        </Grid.Background>
+    </Grid>
+
+</phone:PhoneApplicationPage>
